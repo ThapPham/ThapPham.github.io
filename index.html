@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phạm Đình Thập — CV</title>
+<meta name="description" content="CV Phạm Đình Thập — Kỹ sư Cơ khí, Quản lý Sản xuất. Song ngữ Việt / Anh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#ffffff;
+  --ground:#dfe3e6;
+  --side:#eceff1;
+  --ink:#22262b;
+  --body:#3b4147;
+  --muted:#6b747c;
+  --rule:#d5dade;
+  --accent:#b7472f;
+  --accent-soft:#e6d3cd;
+  --sheet:1040px;
+  --f-sans:"Be Vietnam Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--body);
+  font-family:var(--f-sans);font-size:15px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding:24px 16px 64px;
+}
+img{max-width:100%;display:block}
+
+/* ---------- language switch ---------- */
+.topbar{
+  max-width:var(--sheet);margin:0 auto 18px;
+  display:flex;justify-content:flex-end;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.switch{display:flex;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:3px;gap:2px;box-shadow:0 1px 2px rgba(34,38,43,.06)}
+.switch button{
+  font:600 12px/1 var(--f-sans);letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 16px;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;
+  transition:background .18s ease,color .18s ease;
+}
+.switch button:hover{color:var(--ink)}
+.switch button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.switch button:focus-visible,.print-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.print-btn{
+  font:500 12px/1 var(--f-sans);letter-spacing:.06em;text-transform:uppercase;
+  padding:10px 16px;border:1px solid var(--rule);border-radius:999px;
+  background:var(--paper);color:var(--muted);cursor:pointer;transition:color .18s ease,border-color .18s ease;
+}
+.print-btn:hover{color:var(--ink);border-color:var(--muted)}
+
+/* ---------- sheet ---------- */
+.sheet{
+  max-width:var(--sheet);margin:0 auto;background:var(--paper);
+  box-shadow:0 1px 3px rgba(34,38,43,.1),0 12px 40px rgba(34,38,43,.12);
+  display:grid;grid-template-columns:325px 1fr;
+}
+
+/* ---------- sidebar ---------- */
+.aside{background:var(--side);padding:0 0 36px;display:flex;flex-direction:column;gap:28px}
+.photo-frame{background:#fff;padding:14px}
+.photo-frame img{aspect-ratio:3/4;object-fit:cover;object-position:50% 12%;width:100%;background:#f2f4f5}
+.aside section{padding:0 28px}
+.aside h2,.main h2{
+  font:600 12px/1 var(--f-sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+  margin:0 0 16px;display:flex;align-items:center;gap:10px;
+}
+.aside h2::after,.main h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+.main h2::after{background:var(--accent-soft)}
+
+.skill{display:grid;gap:6px;margin-bottom:14px}
+.skill-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.skill-name{font-size:13.5px;font-weight:500;color:var(--ink)}
+.skill-note{font:500 11px/1 var(--f-mono);color:var(--accent);letter-spacing:.02em;white-space:nowrap}
+.bar{height:5px;background:#d7dbde;border-radius:3px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--accent);border-radius:3px}
+
+ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+ul.plain li{position:relative;padding-left:15px;font-size:13.5px;line-height:1.5}
+ul.plain li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+.contact{display:grid;gap:12px}
+.contact .row{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+.contact .k{
+  font:500 10px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  padding-top:3px;min-width:52px;
+}
+.contact .v{font-size:13.5px;line-height:1.45;color:var(--ink);word-break:break-word}
+.contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.contact a:hover{border-bottom-color:var(--accent)}
+
+/* ---------- main ---------- */
+.main{padding:0 0 44px}
+.nameplate{
+  background:var(--ink);color:#fff;padding:34px 40px 30px;margin-bottom:34px;
+  display:flex;align-items:center;gap:22px;
+}
+.np-photo{display:none;width:88px;height:110px;object-fit:cover;object-position:50% 12%;background:#fff;flex:none}
+.np-text{min-width:0}
+.nameplate h1{
+  margin:0;font-size:clamp(28px,4.4vw,40px);font-weight:700;letter-spacing:.035em;
+  text-transform:uppercase;line-height:1.12;text-wrap:balance;
+}
+.nameplate .role{
+  margin:12px 0 0;font-size:14px;font-weight:500;color:#c7cdd2;letter-spacing:.02em;
+}
+.nameplate .meta{
+  margin:16px 0 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);
+  font:400 11.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:#9aa3ab;
+  display:flex;gap:18px;flex-wrap:wrap;
+}
+.main section{padding:0 40px;margin-bottom:32px}
+.main section:last-child{margin-bottom:0}
+.lede p{margin:0 0 10px;font-size:14.5px;line-height:1.72;max-width:64ch}
+.lede p:last-child{margin-bottom:0}
+
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--accent-soft)}
+.job{position:relative;margin-bottom:26px;break-inside:avoid}
+.job:last-child{margin-bottom:0}
+.job::before{
+  content:"";position:absolute;left:-26px;top:5px;width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:2.5px solid var(--accent);
+}
+.job.current::before{background:var(--accent)}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:3px}
+.job h3{margin:0;font-size:16px;font-weight:600;color:var(--ink);letter-spacing:.005em}
+.job .period{
+  font:500 11.5px/1 var(--f-mono);color:var(--accent);letter-spacing:.04em;
+  white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+.job .org{margin:0 0 10px;font-size:13.5px;color:var(--muted);font-weight:500}
+.job ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.job li{position:relative;padding-left:16px;font-size:14px;line-height:1.6}
+.job li::before{
+  content:"";position:absolute;left:0;top:.66em;width:6px;height:1.5px;background:var(--muted);
+}
+
+.edu{display:grid;gap:4px;break-inside:avoid}
+.edu-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.edu h3{margin:0;font-size:16px;font-weight:600;color:var(--ink)}
+.edu .period{font:500 11.5px/1 var(--f-mono);color:var(--accent);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.edu .degree{margin:0;font-size:14px;color:var(--body)}
+.edu .note{margin:0;font-size:13.5px;color:var(--muted)}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.main ul.plain li{font-size:14px}
+
+.foot{
+  max-width:var(--sheet);margin:20px auto 0;text-align:center;
+  font:400 11.5px/1.6 var(--f-mono);color:#8a9299;letter-spacing:.04em;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:880px){
+  .sheet{display:flex;flex-direction:column}
+  .main{order:1;padding-bottom:34px}
+  .aside{order:2;padding:30px 0;gap:26px}
+  .photo-frame{display:none}
+  .np-photo{display:block}
+  .nameplate{padding:24px;margin-bottom:28px;gap:18px}
+  .nameplate h1{font-size:clamp(22px,6.4vw,30px)}
+  .nameplate .meta{gap:12px;font-size:10.5px}
+  .main section{padding:0 24px}
+  .aside section{padding:0 24px}
+  .grid-2{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  body{padding:16px 12px 40px}
+  .np-photo{width:68px;height:86px}
+  .topbar{justify-content:center}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+
+/* ---------- print ---------- */
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff;padding:0;font-size:10.5pt}
+  .topbar,.foot{display:none}
+  .sheet{box-shadow:none;max-width:100%;grid-template-columns:300px 1fr}
+  .aside,.nameplate,.bar span,.bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .job,.edu,.skill{break-inside:avoid}
+  .main section{margin-bottom:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="switch" role="group" id="langSwitch">
+    <button type="button" id="btn-vi" data-lang="vi" aria-pressed="true">Tiếng Việt</button>
+    <button type="button" id="btn-en" data-lang="en" aria-pressed="false">English</button>
+  </div>
+  <button type="button" class="print-btn" id="printBtn">In / PDF</button>
+</div>
+
+<main class="sheet">
+  <aside class="aside">
+    <div class="photo-frame">
+      <img src="assets/photo.jpg" alt="Phạm Đình Thập" id="photo">
+    </div>
+
+    <section>
+      <h2 id="h-skills">Kỹ năng chuyên môn</h2>
+      <div id="skills"></div>
+    </section>
+
+    <section>
+      <h2 id="h-soft">Kỹ năng mềm</h2>
+      <ul class="plain" id="soft"></ul>
+    </section>
+
+    <section>
+      <h2 id="h-lang">Ngoại ngữ</h2>
+      <ul class="plain" id="langs"></ul>
+    </section>
+
+    <section>
+      <h2 id="h-hobby">Sở thích</h2>
+      <ul class="plain" id="hobbies"></ul>
+    </section>
+
+    <section>
+      <h2 id="h-contact">Thông tin liên hệ</h2>
+      <div class="contact" id="contact"></div>
+    </section>
+  </aside>
+
+  <div class="main">
+    <header class="nameplate">
+      <img class="np-photo" src="assets/photo.jpg" alt="" id="photoSmall">
+      <div class="np-text">
+        <h1 id="name">Phạm Đình Thập</h1>
+        <p class="role" id="role"></p>
+        <p class="meta" id="meta"></p>
+      </div>
+    </header>
+
+    <section class="lede">
+      <h2 id="h-profile">Giới thiệu bản thân</h2>
+      <div id="profile"></div>
+    </section>
+
+    <section>
+      <h2 id="h-exp">Kinh nghiệm làm việc</h2>
+      <div class="timeline" id="experience"></div>
+    </section>
+
+    <section>
+      <h2 id="h-edu">Học vấn</h2>
+      <div id="education"></div>
+    </section>
+
+    <section>
+      <h2 id="h-act">Hoạt động khác</h2>
+      <ul class="plain" id="activities"></ul>
+    </section>
+  </div>
+</main>
+
+<p class="foot" id="foot"></p>
+
+<script>
+/* =====================================================================
+   NỘI DUNG CV — sửa ở đây là toàn bộ trang tự cập nhật.
+   CV CONTENT — edit here and the whole page updates.
+   ===================================================================== */
+const DATA = {
+  vi: {
+    htmlLang: "vi",
+    docTitle: "Phạm Đình Thập — CV",
+    name: "Phạm Đình Thập",
+    role: "Phụ trách Kế hoạch Công ty · Quản lý Sản xuất",
+    meta: ["Sinh 08.11.1990", "Nam Định, Việt Nam", "10 năm quản lý sản xuất & kế hoạch"],
+    headings: {
+      skills: "Kỹ năng chuyên môn",
+      soft: "Kỹ năng mềm",
+      lang: "Ngoại ngữ",
+      hobby: "Sở thích",
+      contact: "Thông tin liên hệ",
+      profile: "Giới thiệu bản thân",
+      exp: "Kinh nghiệm làm việc",
+      edu: "Học vấn",
+      act: "Hoạt động khác"
+    },
+    ui: { print: "In / PDF", foot: "Cập nhật 09/2026 · Nhấn “In / PDF” để lưu bản PDF" },
+    profile: [
+      "10 năm làm công tác quản lý sản xuất trong ngành chế biến lâm sản, đi lên theo đúng lộ trình: kế hoạch sản xuất → xưởng trưởng trực tiếp điều hành sản xuất → phụ trách kế hoạch nhà máy → phụ trách kế hoạch của toàn công ty. Công việc hằng ngày của tôi là cân đối năng lực từng công đoạn với tiến độ giao hàng, tổ chức nguồn lực và kiểm soát vật tư, tồn kho để kế hoạch chạy đúng.",
+      "Nền tảng kỹ sư cơ khí giúp tôi hiểu máy móc và quy trình đến từng chi tiết, nhờ đó xử lý sự cố nhanh và nhìn ra chỗ còn dư địa cải tiến. Tôi đã triển khai Lean – 5S cho nhà máy và chủ trì nhiều đề tài cải tiến nâng cao năng suất, chất lượng.",
+      "Với đồng nghiệp, tôi là người đáng tin cậy, chăm chỉ và ham học hỏi. Tôi hy vọng kinh nghiệm quản lý sản xuất sẵn có cùng nhiệt huyết với công việc sẽ mang lại những đóng góp có ý nghĩa cho công ty nơi tôi làm việc."
+    ],
+    experience: [
+      {
+        role: "Phụ trách kế hoạch công ty — Đội trưởng",
+        org: "Công ty Cổ phần Lâm sản Nam Định",
+        period: "06/2026 – Hiện tại",
+        current: true,
+        bullets: [
+          "Phụ trách công tác kế hoạch sản xuất của toàn công ty: tiếp nhận đơn hàng, cân đối năng lực giữa các nhà máy, xưởng và ban hành kế hoạch sản xuất.",
+          "Theo dõi tiến độ toàn bộ đơn hàng, cảnh báo sớm các đơn có nguy cơ trễ và điều chỉnh kế hoạch kịp thời.",
+          "Đầu mối phối hợp với Kinh doanh, Vật tư – Kho vận, QA / QC và các nhà máy để đảm bảo cung ứng vật tư và tiến độ giao hàng.",
+          "Phụ trách đội kế hoạch: phân công công việc, chuẩn hóa biểu mẫu và hệ thống số liệu phục vụ điều hành.",
+          "Tổng hợp, phân tích số liệu sản lượng – tiến độ – tồn kho, báo cáo Ban Giám đốc phục vụ ra quyết định."
+        ]
+      },
+      {
+        role: "Phụ trách kế hoạch nhà máy — Đội trưởng",
+        org: "Công ty Cổ phần Lâm sản Nam Định",
+        period: "06/2022 – 06/2026",
+        bullets: [
+          "Lập và điều độ kế hoạch sản xuất cho toàn nhà máy, cân đối năng lực từng công đoạn với thời hạn giao hàng của từng đơn hàng.",
+          "Theo dõi tiến độ từng công đoạn, phát hiện điểm nghẽn và điều chỉnh kế hoạch để giữ tiến độ chung.",
+          "Kiểm soát nhu cầu và tồn kho vật tư; phối hợp với Kho vận, Mua hàng để sản xuất không gián đoạn.",
+          "Phụ trách đội kế hoạch của nhà máy; xây dựng và duy trì hệ thống số liệu theo dõi sản lượng, tiến độ."
+        ]
+      },
+      {
+        role: "Quản lý xưởng sản xuất — Xưởng trưởng",
+        org: "Công ty Cổ phần Lâm sản Nam Định",
+        period: "03/2019 – 06/2022",
+        bullets: [
+          "Chịu trách nhiệm điều hành toàn bộ hoạt động sản xuất tại xưởng, đảm bảo hoàn thành sản lượng theo kế hoạch và đúng quy trình công nghệ được giao.",
+          "Tổ chức phân công, điều phối nhân lực theo từng ca sản xuất; đôn đốc và hướng dẫn công nhân đảm bảo năng suất, chất lượng và tiến độ.",
+          "Phát hiện và xử lý kịp thời các sự cố phát sinh về máy móc và con người trong ca làm việc, hạn chế thời gian dừng chuyền.",
+          "Duy trì kỷ luật xưởng: an toàn lao động, vệ sinh công nghiệp, phòng chống cháy nổ và nền nếp 5S."
+        ]
+      },
+      {
+        role: "Quản lý bộ phận kế hoạch sản xuất",
+        org: "Công ty Cổ phần Lâm sản Nam Định",
+        period: "08/2016 – 03/2019",
+        bullets: [
+          "Lập kế hoạch sản xuất dựa trên đơn hàng của khách hàng — giai đoạn xây dựng nền nếp làm kế hoạch cho nhà máy.",
+          "Phối hợp với QA / QC và Kho vận, kiểm tra tình trạng cung – cầu vật tư để đảm bảo sản xuất không gián đoạn.",
+          "Cập nhật, phân tích dữ liệu tồn kho và điều độ sản xuất, đảm bảo năng suất, chất lượng và tiến độ."
+        ]
+      },
+      {
+        role: "Kỹ sư cải tiến sản xuất",
+        org: "Công ty Cổ phần Lâm sản Nam Định",
+        period: "03/2015 – 08/2016",
+        bullets: [
+          "Triển khai đào tạo và áp dụng Lean, 5S trong toàn nhà máy.",
+          "Chuẩn hóa quy trình sản xuất cho từng chi tiết trong sản phẩm — cơ sở để xây dựng định mức và lập kế hoạch sản xuất.",
+          "Theo dõi, giám sát các công đoạn sản xuất theo quy trình, phân tích điểm nghẽn và đưa ra giải pháp cải tiến nâng cao năng suất, chất lượng.",
+          "Chủ trì nhiều đề tài cải tiến máy móc và quy trình sản xuất đạt hiệu quả cao; được nhận Bằng khen của Công đoàn ngành Nông nghiệp và Phát triển Nông thôn."
+        ]
+      },
+      {
+        role: "Kỹ sư thiết kế",
+        org: "Công ty TNHH Ánh Dương — Hà Nội",
+        period: "11/2013 – 03/2015",
+        bullets: [
+          "Thiết kế sản phẩm theo mẫu và thiết kế đồ gá phục vụ gia công, chế tạo.",
+          "Lập bảng tính nguyên vật liệu, lập quy trình sản xuất và triển khai xuống các tổ sản xuất — nền tảng cho công việc định mức, kế hoạch và điều độ về sau."
+        ]
+      }
+    ],
+    education: [
+      {
+        school: "Đại học Công nghiệp Hà Nội",
+        period: "2008 – 2013",
+        degree: "Kỹ sư Công nghệ Kỹ thuật Cơ khí",
+        note: ""
+      }
+    ],
+    skills: [
+      { name: "Lập kế hoạch & điều độ sản xuất", note: "7 năm", level: 94 },
+      { name: "Quản lý tiến độ đơn hàng, giao hàng", note: "7 năm", level: 92 },
+      { name: "Điều hành & quản lý xưởng sản xuất", note: "3 năm", level: 90 },
+      { name: "Kiểm soát vật tư & tồn kho", note: "7 năm", level: 88 },
+      { name: "Lean · 5S · Kaizen", note: "11 năm", level: 88 },
+      { name: "Quản lý đội nhóm & đào tạo", note: "7 năm", level: 86 },
+      { name: "Excel & tin học văn phòng", note: "Thành thạo", level: 85 },
+      { name: "AutoCAD · SolidWorks", note: "Thành thạo", level: 80 }
+    ],
+    soft: [
+      "Kỹ năng lập kế hoạch và tổ chức sản xuất",
+      "Kỹ năng quản trị nguồn lực: nhân lực, máy móc, vật tư",
+      "Kỹ năng họp, điều hành và ra quyết định",
+      "Xử lý nhanh các sự cố phát sinh trong sản xuất",
+      "Làm việc độc lập và làm việc nhóm dưới áp lực cao về thời gian, tiến độ",
+      "Phân tích và cải tiến quy trình, máy móc thiết bị trong sản xuất công nghiệp"
+    ],
+    languages: ["Tiếng Anh — giao tiếp và đọc tài liệu kỹ thuật"],
+    hobbies: [
+      "Tự làm những món đồ nhỏ trong gia đình (DIY)",
+      "Nghe và sưu tập thiết bị âm thanh",
+      "Sửa chữa đồ điện tử, xử lý các vấn đề về máy tính và mạng",
+      "Chạy bộ"
+    ],
+    activities: [
+      "Phó Bí thư Đoàn Thanh niên Công ty Cổ phần Lâm sản Nam Định.",
+      "Thành viên nòng cốt, luôn đi tiên phong trong việc tổ chức và vận động mọi người tham gia các hoạt động tập thể của công ty."
+    ],
+    contact: [
+      { k: "Điện thoại", v: "(+84) 096 569 3386", href: "tel:+84965693386" },
+      { k: "Email", v: "thapphamdinh@gmail.com", href: "mailto:thapphamdinh@gmail.com" },
+      { k: "Địa chỉ", v: "Số 1 Liên Hà, P. Lộc Hạ, TP. Nam Định, tỉnh Nam Định" },
+      { k: "Ngày sinh", v: "08 / 11 / 1990" }
+    ]
+  },
+
+  en: {
+    htmlLang: "en",
+    docTitle: "Pham Dinh Thap — CV",
+    name: "Pham Dinh Thap",
+    role: "Company Production Planning Lead · Production Manager",
+    meta: ["Born 08.11.1990", "Nam Dinh, Vietnam", "10 years in production management & planning"],
+    headings: {
+      skills: "Technical skills",
+      soft: "Core strengths",
+      lang: "Languages",
+      hobby: "Interests",
+      contact: "Contact",
+      profile: "Profile",
+      exp: "Work experience",
+      edu: "Education",
+      act: "Other activities"
+    },
+    ui: { print: "Print / PDF", foot: "Updated 09/2026 · Use “Print / PDF” to save a PDF copy" },
+    profile: [
+      "Ten years in production management in the wood-products industry, moving up step by step: production planning → workshop head running the floor directly → plant planning lead → planning lead for the whole company. My daily work is balancing the capacity of each process step against delivery dates, organising resources, and controlling materials and inventory so the plan holds.",
+      "A mechanical engineering background lets me understand the machines and the process down to the detail, so I resolve breakdowns fast and can see where productivity is still being lost. I rolled out Lean and 5S across the plant and led several improvement projects that raised output and quality.",
+      "Colleagues know me as reliable, hardworking and eager to learn. I hope my production management experience and my enthusiasm for the work will make a meaningful contribution to the company I join."
+    ],
+    experience: [
+      {
+        role: "Company Production Planning Lead — Team Leader",
+        org: "Nam Dinh Forest Products JSC (NAFOCO)",
+        period: "06/2026 – Present",
+        current: true,
+        bullets: [
+          "Own production planning for the whole company: take in customer orders, balance capacity across plants and workshops, and issue the production plan.",
+          "Track progress on every order, flag orders at risk of running late early and adjust the plan in time.",
+          "Act as the coordination point between Sales, Materials–Logistics, QA / QC and the plants to secure material supply and delivery dates.",
+          "Lead the planning team: assign work and standardise the forms and data the company runs on.",
+          "Consolidate and analyse output, progress and inventory figures, and report to the Board for decision-making."
+        ]
+      },
+      {
+        role: "Plant Production Planning Lead — Team Leader",
+        org: "Nam Dinh Forest Products JSC (NAFOCO)",
+        period: "06/2022 – 06/2026",
+        bullets: [
+          "Built and scheduled the plant's production plan, balancing the capacity of each process step against each order's delivery date.",
+          "Tracked progress step by step, identified bottlenecks and adjusted the plan to hold the overall schedule.",
+          "Controlled material demand and inventory; worked with Warehouse and Purchasing so production never stopped.",
+          "Led the plant's planning team; built and maintained the data system for tracking output and progress."
+        ]
+      },
+      {
+        role: "Production Workshop Manager — Workshop Head",
+        org: "Nam Dinh Forest Products JSC (NAFOCO)",
+        period: "03/2019 – 06/2022",
+        bullets: [
+          "Accountable for all production activity in the workshop, delivering output on plan and to the assigned technology process.",
+          "Organised, assigned and coordinated manpower shift by shift; guided and pushed operators to meet productivity, quality and schedule targets.",
+          "Detected and resolved machine and manpower incidents promptly during the shift, keeping line stoppages to a minimum.",
+          "Upheld shop-floor discipline: occupational safety, industrial hygiene, fire prevention and 5S standards."
+        ]
+      },
+      {
+        role: "Production Planning Manager",
+        org: "Nam Dinh Forest Products JSC (NAFOCO)",
+        period: "08/2016 – 03/2019",
+        bullets: [
+          "Built the production plan from customer orders — the period in which the plant's planning discipline was established.",
+          "Coordinated with QA / QC and warehouse–logistics; tracked material supply against demand so production never stopped.",
+          "Updated and analysed inventory data and production scheduling to safeguard output, quality and on-time delivery."
+        ]
+      },
+      {
+        role: "Continuous Improvement Engineer",
+        org: "Nam Dinh Forest Products JSC (NAFOCO)",
+        period: "03/2015 – 08/2016",
+        bullets: [
+          "Trained the plant on and rolled out Lean and 5S.",
+          "Standardised the production process for every component of each product — the basis for work norms and production planning.",
+          "Monitored production stages against the defined process, analysed bottlenecks and proposed improvements that raised productivity and quality.",
+          "Led several high-impact machine and process improvement projects; awarded a Certificate of Merit by the Trade Union of the Agriculture and Rural Development sector."
+        ]
+      },
+      {
+        role: "Design Engineer",
+        org: "Anh Duong Co., Ltd — Hanoi",
+        period: "11/2013 – 03/2015",
+        bullets: [
+          "Produced product drawings from customer samples and designed machining jigs and fixtures.",
+          "Prepared bills of materials, wrote production process routings and rolled them out to the production teams — the foundation for later work on norms, planning and scheduling."
+        ]
+      }
+    ],
+    education: [
+      {
+        school: "Hanoi University of Industry",
+        period: "2008 – 2013",
+        degree: "Engineer's degree, Mechanical Engineering Technology",
+        note: ""
+      }
+    ],
+    skills: [
+      { name: "Production planning & scheduling", note: "7 yrs", level: 94 },
+      { name: "Order progress & delivery control", note: "7 yrs", level: 92 },
+      { name: "Workshop operations management", note: "3 yrs", level: 90 },
+      { name: "Material & inventory control", note: "7 yrs", level: 88 },
+      { name: "Lean · 5S · Kaizen", note: "11 yrs", level: 88 },
+      { name: "Team management & training", note: "7 yrs", level: 86 },
+      { name: "Excel & MS Office", note: "Advanced", level: 85 },
+      { name: "AutoCAD · SolidWorks", note: "Advanced", level: 80 }
+    ],
+    soft: [
+      "Planning and organising production",
+      "Resource management: people, machines and materials",
+      "Running meetings, leading teams and making decisions",
+      "Fast resolution of problems arising on the production line",
+      "Working independently and in teams under heavy time and schedule pressure",
+      "Analysing and improving processes and machinery in industrial production"
+    ],
+    languages: ["English — conversational, reads technical documentation"],
+    hobbies: [
+      "Building small things around the house (DIY)",
+      "Listening to and collecting audio equipment",
+      "Repairing electronics, fixing computer and network issues",
+      "Running"
+    ],
+    activities: [
+      "Deputy Secretary of the Youth Union at Nam Dinh Forest Products JSC.",
+      "A core member who consistently takes the lead in organising company-wide activities and encouraging colleagues to take part."
+    ],
+    contact: [
+      { k: "Phone", v: "(+84) 096 569 3386", href: "tel:+84965693386" },
+      { k: "Email", v: "thapphamdinh@gmail.com", href: "mailto:thapphamdinh@gmail.com" },
+      { k: "Address", v: "No. 1 Lien Ha, Loc Ha Ward, Nam Dinh City, Nam Dinh Province, Vietnam" },
+      { k: "Born", v: "08 / 11 / 1990" }
+    ]
+  }
+};
+
+/* ===================== rendering ===================== */
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+
+function render(lang) {
+  const d = DATA[lang];
+  document.documentElement.lang = d.htmlLang;
+  document.title = d.docTitle;
+
+  $("name").textContent = d.name;
+  $("role").textContent = d.role;
+  $("meta").innerHTML = d.meta.map(m => `<span>${esc(m)}</span>`).join("");
+  $("photo").alt = d.name;
+
+  for (const [key, id] of Object.entries({
+    skills:"h-skills", soft:"h-soft", lang:"h-lang", hobby:"h-hobby",
+    contact:"h-contact", profile:"h-profile", exp:"h-exp", edu:"h-edu", act:"h-act"
+  })) $(id).textContent = d.headings[key];
+
+  $("printBtn").textContent = d.ui.print;
+  $("foot").textContent = d.ui.foot;
+
+  $("profile").innerHTML = d.profile.map(p => `<p>${esc(p)}</p>`).join("");
+
+  $("skills").innerHTML = d.skills.map(s => `
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">${esc(s.name)}</span>
+        <span class="skill-note">${esc(s.note)}</span>
+      </div>
+      <div class="bar"><span style="width:${Number(s.level)}%"></span></div>
+    </div>`).join("");
+
+  const list = (arr) => arr.map(i => `<li>${esc(i)}</li>`).join("");
+  $("soft").innerHTML = list(d.soft);
+  $("langs").innerHTML = list(d.languages);
+  $("hobbies").innerHTML = list(d.hobbies);
+  $("activities").innerHTML = list(d.activities);
+
+  $("contact").innerHTML = d.contact.map(c => `
+    <div class="row">
+      <span class="k">${esc(c.k)}</span>
+      <span class="v">${c.href ? `<a href="${esc(c.href)}">${esc(c.v)}</a>` : esc(c.v)}</span>
+    </div>`).join("");
+
+  $("experience").innerHTML = d.experience.map(j => `
+    <article class="job${j.current ? " current" : ""}">
+      <div class="job-head">
+        <h3>${esc(j.role)}</h3>
+        <span class="period">${esc(j.period)}</span>
+      </div>
+      <p class="org">${esc(j.org)}</p>
+      <ul>${j.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
+    </article>`).join("");
+
+  $("education").innerHTML = d.education.map(e => `
+    <div class="edu">
+      <div class="edu-head">
+        <h3>${esc(e.school)}</h3>
+        <span class="period">${esc(e.period)}</span>
+      </div>
+      <p class="degree">${esc(e.degree)}</p>
+      ${e.note ? `<p class="note">${esc(e.note)}</p>` : ""}
+    </div>`).join("");
+
+  $("btn-vi").setAttribute("aria-pressed", String(lang === "vi"));
+  $("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+}
+
+function pickInitialLang() {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (q === "vi" || q === "en") return q;
+  try {
+    const saved = localStorage.getItem("cv-lang");
+    if (saved === "vi" || saved === "en") return saved;
+  } catch (e) { /* storage unavailable */ }
+  return (navigator.language || "").toLowerCase().startsWith("vi") ? "vi" : "vi";
+}
+
+function setLang(lang, push) {
+  render(lang);
+  try { localStorage.setItem("cv-lang", lang); } catch (e) { /* ignore */ }
+  if (push) {
+    const url = new URL(location.href);
+    url.searchParams.set("lang", lang);
+    history.replaceState(null, "", url);
+  }
+}
+
+document.querySelectorAll("#langSwitch button").forEach(b => {
+  b.addEventListener("click", () => setLang(b.dataset.lang, true));
+});
+$("printBtn").addEventListener("click", () => window.print());
+
+setLang(pickInitialLang(), false);
+</script>
+</body>
+</html>
